@@ -1,0 +1,33 @@
+body {
+    font-family: 'Inter';
+    font-style: normal;
+    text-align: center;
+    padding-top: 1%;
+    background: #111827;
+
+}
+
+#main-container {
+    width: 550px;
+    height: 730px;
+    margin: auto;
+    padding: 0px;
+    box-sizing: border-box;
+    background: #1F2937;
+}
+
+#top-container {
+    width: 550px;
+    height: 285px;
+    box-sizing: border-box;
+    background: #6943FF;
+    margin-bottom: 40px;
+}
+
+.unit-container {
+    height: 110px;
+    width: 500px;
+    box-sizing: border-box;
+    margin: 20px auto;
+    background: #273549;
+}
