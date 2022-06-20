@@ -11,10 +11,15 @@ const conversionLength = document.getElementById("length");
 const conversionVolume = document.getElementById("volume");
 const conversionMass = document.getElementById("mass");
 
+userInput.addEventListener("input", function(){
+    let userValueLength = userInput.value.length;
+    let newInputSize = userValueLength - 1 <= 1 ? 1 : userValueLength - 1;
+    userInput.setAttribute("size", String(newInputSize));
+})
+
 convertButton.addEventListener("click", function(){
     let userValue = Number(userInput.value);
-    if (userValue !== NaN) {
-
+    if (userValue === userValue) {
         let metersToFeet = (userValue * 3.281).toFixed(3);
         let feetToMeters = (userValue / 3.281).toFixed(3);
 
@@ -24,8 +29,10 @@ convertButton.addEventListener("click", function(){
         let kilogramsToPounds = (userValue * 2.204).toFixed(3);
         let poundsToKilograms = (userValue / 2.204).toFixed(3);
 
-        conversionLength.textContent = `${userValue} meters = ${metersToFeet} feet | ${userValue} feet = ${feetToMeters} meters`
-        conversionVolume.textContent = `${userValue} liters = ${litersToGallons} gallons | ${userValue} gallons = ${gallonsToLiters} liters`
-        conversionMass.textContent = `${userValue} kilos = ${kilogramsToPounds} pounds | ${userValue} pounds = ${poundsToKilograms} kilos`
+        conversionLength.textContent = `${userValue} meters = ${metersToFeet} feet | ${userValue} feet = ${feetToMeters} meters`;
+        conversionVolume.textContent = `${userValue} liters = ${litersToGallons} gallons | ${userValue} gallons = ${gallonsToLiters} liters`;
+        conversionMass.textContent = `${userValue} kilos = ${kilogramsToPounds} pounds | ${userValue} pounds = ${poundsToKilograms} kilos`;
+    } else {
+        alert("The input field needs to contain ONLY NUMBERS !");
     }
 })

@@ -1,11 +1,19 @@
+@font-face{ 
+	font-family: 'Hattori Hanzo';
+	src: url('fonts/Hattori_Hanzo-webfont.eot');
+	src: url('fonts/Hattori_Hanzo-webfont.eot?iefix') format('eot'),
+	     url('fonts/Hattori_Hanzo-webfont.woff') format('woff'),
+	     url('fonts/Hattori_Hanzo-webfont.ttf') format('truetype'),
+	     url('fonts/Hattori_Hanzo-webfont.svg#webfont') format('svg');
+}
+
 body {
-    font-family: 'Inter';
+    font-family: 'Hattori Hanzo', sans-serif;
     font-style: normal;
     text-align: center;
     padding-top: 1%;
     padding-bottom: 1%;
     background: #111827;
-
 }
 
 p {
@@ -39,9 +47,6 @@ p {
 }
 
 input {
-    width: 117px;
-    height: 83px;
-    box-sizing: border-box;
     border: solid #B295FF 2px;
     border-radius: 5px;
     background: #6943FF;
@@ -51,6 +56,15 @@ input {
     font-weight: 800;
     font-size: 58px;
     color: white;
+}
+
+input:focus {
+    outline: none;
+    border: solid #CCC1FF 2px;
+}
+
+input:invalid {
+    outline: dotted 2px #FF0000;
 }
 
 button {
@@ -63,6 +77,11 @@ button {
     font-weight: 500;
     font-size: 16px;
     color: #3D3D3D;
+}
+
+button:hover {
+    background: #CCC1FF;
+    cursor: pointer;
 }
 
 .unit-container {
